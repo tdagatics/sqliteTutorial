@@ -7,9 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "sqlite3.h"
+#import "Person.H"
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+{
+    NSMutableArray *arrayOfPerson;
+    sqlite3 *personDB;
+    NSString *dbPathString;
+}
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+
+@property (weak, nonatomic) IBOutlet UITextField *ageField;
+
+- (IBAction)addButton:(id)sender;
+- (IBAction)deleteButton:(id)sender;
+- (IBAction)displayButton:(id)sender;
 
 @end
 
