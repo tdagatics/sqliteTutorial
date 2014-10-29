@@ -18,14 +18,13 @@
     sqlite3 *personDB;
     NSString *dbPathString;
 }
+
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
-@property (weak, nonatomic) IBOutlet UITableView *myTableView;
-
 @property (weak, nonatomic) IBOutlet UITextField *ageField;
-
 - (IBAction)addButton:(id)sender;
-- (IBAction)deleteButton:(id)sender;
 - (IBAction)displayButton:(id)sender;
+- (IBAction)deleteButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
 

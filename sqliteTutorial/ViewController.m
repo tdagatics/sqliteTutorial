@@ -53,12 +53,18 @@
 
 - (IBAction)addButton:(id)sender {
     char *error;
+    
     if (sqlite3_open([dbPathString UTF8String], &personDB) == SQLITE_OK) {
         NSString *insertStmt = [NSString stringWithFormat:@"INSERT INTO PERSONS(NAME, AGE) values ('%s' '%d')", [self.nameField.text UTF8String], [self.ageField.text intValue]];
         
         const char *insert_stmt = [insertStmt UTF8String];
         
-        if (sqlite3_exec(personDB, insert_stmt, NULL, NULL, &error)==SQLITE_OK) {
+        if (sqlite3_exec(personDB, insert_stmt, NULL, NULL, &error) == SQLITE_OK)
+        
+        
+        
+        {
+        
             NSLog(@"Person added.");
             
             Person *person = [[Person alloc] init];
@@ -70,6 +76,12 @@
         }
         sqlite3_close(personDB);
     }
+}
+
+- (IBAction)displayButton:(id)sender {
+}
+
+- (IBAction)deleteButton:(id)sender {
 }
 
 - (IBAction)displayListButton:(id)sender {

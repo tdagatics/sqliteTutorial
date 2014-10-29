@@ -39,8 +39,7 @@
                                     <rect key="frame" x="16" y="143" width="77" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="addButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j5l-MT-x15"/>
-                                    <action selector="addPersonButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cjn-B1-YCp"/>
+                                    <action selector="addButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qHX-Za-HfS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReS-Lw-hPG">
@@ -50,7 +49,7 @@
                                     <rect key="frame" x="74" y="181" width="92" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="deletePersonButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bCZ-KI-UwZ"/>
+                                    <action selector="deleteButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="r7e-aB-wnh"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="67x-gN-kfS">
@@ -67,10 +66,7 @@
                                     <rect key="frame" x="150" y="143" width="75" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="addPersonButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wXF-RF-xPF"/>
-                                    <action selector="displayButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Jf-HL-BsG"/>
-                                    <action selector="displayListButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vcg-Ae-SqS"/>
-                                    <action selector="displayPersonButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6pW-Ju-Obm"/>
+                                    <action selector="displayButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eo8-Wa-xLn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,13 +94,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="addButton" destination="PRx-sC-QfO" id="80n-Af-ODT"/>
-                        <outlet property="ageField" destination="Vyq-8f-x5a" id="QXH-fw-yZL"/>
-                        <outlet property="deleteButton" destination="ReS-Lw-hPG" id="RrJ-Sp-hc9"/>
-                        <outlet property="displayButton" destination="OG6-U2-4xL" id="S52-Rc-yi7"/>
-                        <outlet property="myTableView" destination="67x-gN-kfS" id="cTs-YV-7MN"/>
-                        <outlet property="nameField" destination="2gV-dj-h7T" id="WUc-Zg-kHX"/>
-                        <outlet property="tableView" destination="67x-gN-kfS" id="FOn-om-ZjS"/>
+                        <outlet property="ageField" destination="Vyq-8f-x5a" id="EZb-Ad-jHU"/>
+                        <outlet property="myTableView" destination="67x-gN-kfS" id="l3z-IV-8ES"/>
+                        <outlet property="nameField" destination="2gV-dj-h7T" id="LIj-vU-TlG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
