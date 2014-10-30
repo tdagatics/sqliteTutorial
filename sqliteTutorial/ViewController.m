@@ -57,7 +57,7 @@
     
     char *error;
     if (sqlite3_open([dbPathString UTF8String], &personDB) == SQLITE_OK) {
-        NSString *insertStmt = [NSString stringWithFormat:@"INSERT INTO PERSONS (NAME, AGE) values ('%s' '%d')", [self.nameField.text UTF8String], [self.ageField.text intValue]];
+        NSString *insertStmt = [NSString stringWithFormat:@"INSERT INTO PERSON (NAME, AGE) values ('%s', '%d')", [self.nameField.text UTF8String], [self.ageField.text intValue]];
         
         const char *insert_stmt = [insertStmt UTF8String];
         
@@ -82,7 +82,7 @@
     if (sqlite3_open([dbPathString UTF8String], &personDB) == SQLITE_OK) {
         [arrayOfPerson removeAllObjects];
         
-        NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM PERSONS"];
+        NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM PERSON"];
         const char* query_sql = [querySql UTF8String];
         if (sqlite3_prepare(personDB, query_sql, -1, &statement, NULL)==SQLITE_OK) {
             while (sqlite3_step(statement)==SQLITE_ROW) {
